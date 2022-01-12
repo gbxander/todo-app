@@ -287,11 +287,11 @@ button.delete-btn {
   -webkit-transform: rotate(45deg) scale(0);
   transform: rotate(45deg) scale(0);
   position: absolute;
-  left: 5.57142857px;
-  top: 0.14285714px;
+  left: 2px;
+  top: 0.2px;
   display: table;
-  width: 7.71428571px;
-  height: 13.14285714px;
+  width: 7px;
+  height: 28px;
   border: 2px solid #fff;
   border-top: 0;
   border-left: 0;
