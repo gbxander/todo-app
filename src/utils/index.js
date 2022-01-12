@@ -1,3 +1,8 @@
+/** 
+ *  @description calculates percentage of completed todo items
+ *  @param {array} todos - list of todos
+ *  @returns {number} - percent of completed todos
+ */
 export const getProgress = (todos = []) => {
     const completed = todos.reduce((total, curr) => {
         total = curr.completed ? total + 1 : total
