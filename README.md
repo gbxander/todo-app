@@ -1,9 +1,22 @@
-# Getting Started with Create React App
+# Todo App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Basic Todo application that allows a user to create a todo list and save in a database.
 
-## Available Scripts
+## Screenshots
+![](/src/assets/project_screenshots/list-view.png)
 
+## About
+This project is based on a code refactor of an old todo app I built a few years ago.
+Refactor mostly based on switch from class based components to hook based functional components
+for state management and sharing.
+## Built With
+- Javascript
+- HTML
+- CSS
+- React.js
+
+
+## Running Instructions
 In the project directory, you can run:
 
 ### `npm start`
