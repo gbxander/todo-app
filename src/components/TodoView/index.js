@@ -13,7 +13,7 @@ import todoReducer, {
     SET_DESCRIPTION
 } from '../../hooks/useTodoReducer'
 import { getProgress } from '../../utils';
-import '../../App.css';
+import '../../assets/styles/styles.css';
 
 
 const TodoView = () => {

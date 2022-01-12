@@ -1,0 +1,344 @@
+@import '~antd/dist/antd.css';
+
+/**
+* @description: General element styling
+**/
+
+body {
+  margin: 0px;
+  font-family: sans-serif;
+  background-color: #f2f2f2;
+  text-align: center;
+  display: block;
+}
+
+h1 {
+  margin-top: 15px;
+  margin-bottom: 0px;
+  color: #dbaddb;
+  font-family: 'Permanent Marker', cursive;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0px;
+  text-align: left;
+}
+
+hr {
+  border: 0;
+  height: 2px;
+  background: #dbaddb;
+}
+
+button:focus {
+  outline: none;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+/**
+* @description: Style for the main logo
+**/
+.logo {
+  color: #dbaddb;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 35px;
+}
+
+section.app {
+  margin: auto;
+  width: 450px;
+  padding: 20px;
+}
+
+/**
+* @description: Style the todo list container
+**/
+.todo-wrapper {
+  margin: 40px auto 40px auto;
+  border-radius: 0px 0px 10px 10px;
+  background-color: #fff;
+  box-shadow: 0 0 5px #5e5d5e;
+  padding: 25px;
+  position: relative;
+  z-index: 1;
+}
+
+.description-wrapper .ant-input {
+  width: 350px;
+  margin: 10px 0px 5px 0;
+  font-size: 18px;
+  border: none;
+  outline: none;
+}
+
+.todo-row {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+/**
+* @description: Styles the border and width of textarea
+**/
+.todo-input textarea {
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  width: 70%;
+  padding-left: 10px;
+  resize: none;
+}
+
+.todo-input {
+  width: 322px;
+}
+
+/**
+* @description: On hover of a todo-row div style the textarea
+* accordingly
+**/
+.todo-row:hover > .todo-input textarea {
+  outline: 1px solid #ddd;
+  background: #fafafa;
+}
+
+/**
+* @description: On hover of a todo-row div change color of todo delete button
+**/
+.todo-row:hover > button.delete-btn {
+  color: rgba(0, 0, 0, 0.65);
+}
+
+/**
+* @description: Styles the border and size of textarea in edit mode
+**/
+.edit-input textarea {
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  width: 100%;
+  padding-left: 10px;
+  resize: none;
+}
+
+/**
+* @description: General styles for the todo delete button 
+**/
+button.delete-btn {
+  float: right;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: none;
+  margin-left: -40px;
+  z-index: 2;
+}
+
+.ant-checkbox-inner {
+  border: 2px solid #55acdd;
+}
+
+/**
+* @description: Styles the progress completed checkmark
+**/
+.check-mark {
+  font-size: 36px;
+  position: absolute;
+  top: -25px;
+  right: -10px;
+  z-index: 1;
+  animation: check 450ms ease-out;
+}
+
+.todo-input {
+  display: inline;
+  margin-left: 10px;
+  position: relative;
+}
+
+.todo-add-item {
+  margin-top: 20px;
+}
+
+.ant-progress-success-bg,
+.ant-progress-bg {
+  background-color: #dbaddb;
+}
+
+.list-save-and-copy {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  margin-right: 30px;
+}
+
+#save-status {
+  display: inline-block;
+  margin-right: 20px;
+  font: 18px Lato;
+}
+
+#copy-button {
+  font: 17px Lato;
+}
+
+/**
+* @description: Styles the floating list icon on the homepage
+**/
+.home-logo .anticon,
+.anticon-form {
+  margin-top: 50px;
+  font-size: 100px;
+  color: #fff;
+  border-radius: 10%;
+  box-shadow: 0 5px 15px 0px rgba(247, 41, 41, 0.6);
+  transform: translatey(0px);
+  animation: float 2s ease-in-out infinite;
+}
+
+.home-logo .ant-btn,
+.ant-btn-primary,
+.ant-btn-block {
+  margin-top: 50px;
+  background-color: #dbaddb;
+  color: #fff;
+  border: 2px solid #f0eded;
+}
+
+.example {
+  position: relative;
+}
+
+/**
+* @description: Position and display styling for incomplete progress bar
+**/
+.incomplete-progress {
+  line-height: 0;
+  display: block;
+  overflow: hidden;
+  border-radius: 5px 5px 0 0;
+  top: -33px;
+  z-index: -1;
+}
+
+/**
+* @description: Background-Color styling for incomplete progress bar
+**/
+.incomplete-progress .ant-progress-inner {
+  background-color: #dbaddb;
+  border-radius: 0;
+  width: 100%;
+}
+
+/**
+* @description: Color styling for incomplete progress bar
+**/
+.incomplete-progress .ant-progress-inner .ant-progress-bg {
+  background-color: #b860b8;
+}
+
+.incomplete-progress .ant-progress-bg {
+  background-color: #b860b8;
+}
+
+.ant-progress-line {
+  width: 114.5%;
+  font-size: 15px;
+  left: -26px;
+}
+
+/**
+* @description: Position and display styling for incomplete progress bar
+**/
+.completed-progress {
+  line-height: 0;
+  display: block;
+  overflow: hidden;
+  border-radius: 5px 5px 0 0;
+  top: -33px;
+  z-index: -1;
+}
+
+/**
+* @description: Background-color styling for incomplete progress bar
+**/
+.completed-progress .ant-progress-inner .ant-progress-bg {
+  background-color: #70c060;
+}
+
+/**
+* @description: Border and size styling for checkbox
+**/
+.ant-checkbox-inner {
+  width: 22px;
+  height: 22px;
+  border-width: 2px;
+  border-style: solid;
+}
+
+/**
+* @description: Styles the checkmark of the checkbox
+**/
+.ant-checkbox-inner:after {
+  -webkit-transform: rotate(45deg) scale(0);
+  transform: rotate(45deg) scale(0);
+  position: absolute;
+  left: 5.57142857px;
+  top: 0.14285714px;
+  display: table;
+  width: 7.71428571px;
+  height: 13.14285714px;
+  border: 2px solid #fff;
+  border-top: 0;
+  border-left: 0;
+  content: ' ';
+  transition: all 0.1s cubic-bezier(0.71, -0.46, 0.88, 0.6), opacity 0.1s;
+  opacity: 0;
+}
+
+/**
+* @styles keyframes
+* @description: All the keyframes for the checkmark animation
+**/
+
+@keyframes check {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes uncheck {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+/**
+* @styles keyframes
+* @description: Keyframes for the floating list icon animation
+**/
+
+@keyframes float {
+  0% {
+    box-shadow: 0 30px 50px 0px rgba(255, 255, 255, 0.6);
+    transform: translatey(0px);
+  }
+  50% {
+    box-shadow: 0 30px 50px 0px rgb(255, 255, 255);
+    transform: translatey(-25px);
+  }
+  100% {
+    box-shadow: 0 30px 50px 0px rgba(255, 255, 255, 0.6);
+    transform: translatey(0px);
+  }
+}
+

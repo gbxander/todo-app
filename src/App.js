@@ -1,4 +1,4 @@
-import './App.css';
+import './assets/styles/styles.css';
 import TodoView from './components/TodoView'
 
 function App() {
