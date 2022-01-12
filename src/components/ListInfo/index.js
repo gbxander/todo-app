@@ -1,8 +1,13 @@
 import React, {useState} from 'react'
 import { Input } from 'antd'
+import PropTypes from 'prop-types'
 
 const { TextArea } = Input
 
+/**
+ * @description Component that renders section for list info. This includes
+ * the input for list title and list description.
+ */
 const ListInfo = ({ handleSetTitle, handleSetDescription}) => {
     const [title, setTitle] = useState("")
     const [description, setDescription] = useState("")
@@ -32,5 +37,9 @@ const ListInfo = ({ handleSetTitle, handleSetDescription}) => {
       )
 }
 
+ListInfo.propTypes = {
+  handleSetTitle: PropTypes.func.isRequired,
+  handleSetDescription: PropTypes.func.isRequired
+}
 
 export default ListInfo

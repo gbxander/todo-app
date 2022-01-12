@@ -1,7 +1,11 @@
 import React from 'react'
 import {List} from 'antd'
 import Todo from '../Todo'
+import PropTypes from 'prop-types'
 
+/**
+ * @description Renders the entire list of todos
+ */
 const TodoList = ({ todos, ...rest}) => {
     return (
       <div className='todo-list'>
@@ -31,6 +35,10 @@ const TodoList = ({ todos, ...rest}) => {
         />
       </div>
     )
+  }
+
+  TodoList.propTypes = {
+    todos: PropTypes.array.isRequired
   }
 
   export default TodoList

@@ -1,6 +1,7 @@
 import React, { useMemo, useReducer } from 'react'
 import { Progress, Button } from 'antd'
 import Icon from '@ant-design/icons';
+import PropTypes from 'prop-types'
 import TodoList from '../TodoList'
 import ListInfo from '../ListInfo'
 import todoReducer, {
@@ -15,7 +16,10 @@ import todoReducer, {
 import { getProgress } from '../../utils';
 import '../../assets/styles/styles.css';
 
-
+/**
+ * @description Renders entire todo section of app which includes the todo list
+ * as well as the list info section and list progress bar
+ */
 const TodoView = () => {
     const [state, dispatch] = useReducer(todoReducer, INITIAL_STATE)
     const memoizedProgress = useMemo(() => getProgress(state.todos), [state.todos])
@@ -77,6 +81,9 @@ const TodoView = () => {
         </div>
     )
     
+}
+
+TodoView.propTypes = {
 }
 
 export default TodoView

@@ -1,9 +1,14 @@
 import React, { useState } from 'react'
 import { Checkbox, Input } from 'antd'
-import { DeleteOutlined } from '@ant-design/icons';
+import { DeleteOutlined } from '@ant-design/icons'
+import PropTypes from 'prop-types'
 
 const { TextArea } = Input
 
+/**
+ * @description Renders single todo element which includes the string value of task,
+ * a checkbox to mark todo as complete and a button to remove todo.
+ */
 const Todo = ({ todo, handleTodoEdit, handleTodoToggle, handleTodoDelete }) => {
     const [task, setTask] = useState("")
     const [isEditing, setIsEditing] = useState(false)
@@ -55,6 +60,13 @@ const Todo = ({ todo, handleTodoEdit, handleTodoToggle, handleTodoDelete }) => {
           </div>
         )
       }
+}
+
+Todo.propTypes = {
+  todo: PropTypes.object.isRequired,
+  handleTodoEdit: PropTypes.func.isRequired,
+  handleTodoToggle: PropTypes.func.isRequired,
+  handleTodoDelete: PropTypes.func.isRequired,
 }
 
 export default Todo
