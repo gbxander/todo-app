@@ -1,9 +1,12 @@
 import '../../assets/styles/styles.css';
 import TodoView from '../TodoView'
+import Firebase, { FirebaseContext } from '../../firebase'
 
 function App() {
   return (
-    <TodoView />
+    <FirebaseContext.Provider value={new Firebase()}>
+      <TodoView />
+    </FirebaseContext.Provider>
   );
 }
 
